@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chessbord via JavaScript</title>
+</head>
+<style>
+	#chessBoard{
+    display: inline-block;
+    border: 2px solid black;
+	}
+	#chessBoard span{
+    display: inline-block;
+    width: 190px;
+    height: 190px;
+	}
+	#chessBoard div{
+    line-height: 1px;
+	}
+	#chessBoard div:nth-child(odd) span:nth-child(even),
+	#chessBoard div:nth-child(even) span:nth-child(odd){
+    background-color: black;
+	}
+	#chessBoard div:nth-child(even) span:nth-child(even),
+	#chessBoard div:nth-child(odd) span:nth-child(odd){
+    background-color: snow;
+	}
+</style>
+<body>
+	<div id="chessBoard"></div>
+	<script>
+		var x=8;//col
+			var y=8;//row
+			var chessBoard = document.getElementById("chessBoard");
+			for (var i=0; i<y; i++){
+			    var row = chessBoard.appendChild(document.createElement("div"));
+			    for (var j=0; j<x; j++){
+			        row.appendChild(document.createElement("span"));
+			    }
+			}
+	</script>	
+</body>
+</html>
