@@ -23,7 +23,6 @@ body{
     margin-top: 0px!important; 
     color: white;
 }
-
 .navbar-default .navbar-nav > li > a{
 	color: white;
 }
@@ -198,7 +197,6 @@ body{
 	background-color: #00bbef;
 	font-size: 36px;	
 }
-
 /*our services end*/
 /*marketing starts*/
 #marketing{
@@ -207,8 +205,7 @@ body{
 	padding-bottom: 160px;
 	overflow: hidden;
 	background-image: url(../images/general-commertial.png);
-	background-size: cover;
-	
+	background-size: cover;	
 }
 #marketing.sections {
     margin-bottom: 0;
@@ -243,7 +240,6 @@ body{
 	max-width: 705px;
 	margin: 0 auto;
 }
-
 /*marketing ends*/
 
 /*my footer starts*/
@@ -267,7 +263,7 @@ body{
 }
 /*my footer starts*/
 
-
+/*Media Query starts*/
 @media only screen and (max-width: 380px){
 	 .whowearegrid{
 	 	width: 100%;
@@ -291,4 +287,5 @@ body{
     	margin-bottom: 0px;
 	}
 }
+/*Media Query ends*/
 	
