@@ -19,13 +19,17 @@ body{
 .navbar{
 	background-color: #0189af;
 }
+#navigation .navbar-brand {
+    margin-top: 0px!important; 
+    color: white;
+}
 
 .navbar-default .navbar-nav > li > a{
 	color: white;
 }
 .navbar-default .navbar-nav > li > a:hover{
-	background-color: white;
-	color: #0189af;
+	background-color: #00bbef;
+	color: white;
 	border-bottom: 3px solid red;
 }
 .navbar-default{
@@ -53,12 +57,8 @@ body{
 }
 /*navbar ends*/
 /*header section Starts*/
-#header .banner{
-	/*background:url(../image/banner-end.png) 0 0 no-repeat;
-	background-size: cover;
-	height: 495px;*/
-	position: relative;
-	/*filter: brightness(.3);*/
+#header .banner{	
+	position: relative;	
 	overflow: hidden;
 }
 #header .banner .carousel{
@@ -75,10 +75,7 @@ body{
 	font-size: 14px;
 }
 .contactForm #quoteform{	
-	position: absolute;
-	/*top: 70px;
-	left: 223px;
-	right: 223px;*/	
+	position: absolute;	
 	bottom: 20px;
 	overflow: auto;	
 }
@@ -99,6 +96,10 @@ body{
 }
 .contactForm #quoteform .form-group{
 	margin-bottom: 22px;
+}
+.contactForm #quoteform .form-group>i{
+	color: red;
+	position: absolute;
 }
 .contactForm #quoteform .form-group .form-control{
 	border:0px;
@@ -135,13 +136,11 @@ body{
 	float: left;
 	margin-left: -16px;
 }
-/*#download .download-link .download-heading{
-	display: block;
-}*/
 #download .download-right p{
 	font-size: 28px;	
 	padding-bottom: 0px;
 	line-height: 31px;
+	text-align: right;
 }
 #download .download-right{
 	padding-left: 0px;
@@ -150,8 +149,7 @@ body{
 #download .download-heading{
 	font-size: 28px;
 	display: block;	
-	margin-top: -9px;
-	/*float: left;*/
+	margin-top: -9px;	
 }
 #download .download-text{
 	display: block;	
@@ -180,6 +178,9 @@ body{
 	margin-bottom: 0px;
 	padding: 15px;
 	font-size: 20px;
+	color: white;
+	display: table;
+	width: 100%;
 }
 #ourservices .thumbnail p{
 	padding: 18px 15px;
@@ -188,22 +189,15 @@ body{
 #ourservices .thumbnail .caption{
 	padding: 0px;
 }
+#ourservices .thumbnail .caption h3 span {
+    display: table-cell;
+    vertical-align: middle;
+}
 #ourservices .thumbnail h3 span i{
 	padding: 9.5px 19px;
 	background-color: #00bbef;
-	font-size: 36px;
-	margin-right: 12px;
+	font-size: 36px;	
 }
-/*.myservices{
-	text-align: center;	
-	border: 1px solid #d9d9d9;
-	box-shadow: 3px 3px #d9d9d9;
-	padding-top: 40px;
-	padding-bottom: 40px;
-	margin-top: 50px;
-	margin-bottom: 50px;
-	margin: 35px 15px 35px 0px;
-}*/
 
 /*our services end*/
 /*marketing starts*/
@@ -212,6 +206,12 @@ body{
 	padding-top: 160px;
 	padding-bottom: 160px;
 	overflow: hidden;
+	background-image: url(../images/general-commertial.png);
+	background-size: cover;
+	
+}
+#marketing.sections {
+    margin-bottom: 0;
 }
 #marketing >img{
 	position: absolute;
@@ -219,6 +219,13 @@ body{
 	z-index: -1;
 	width: 100%;
 	height: auto;	
+}
+#marketing .marketingstrategies{	
+	background-color: rgba(37, 113, 134, .7);
+	color: white;		
+	padding-left: 304px;
+	padding-top: 25px;
+	padding-bottom: 14px;
 }
 #marketing .marketingstrategies img{
 	padding-right: 14px;
@@ -229,17 +236,14 @@ body{
 }
 #marketing .marketingstrategies p{
 	font-size: 15px;
-	margin-bottom: 36px;
+	margin-bottom: 30px;
 	max-width: 698px;
 }
-#marketing .marketingstrategies{	
-	background-color: #257186;
-	color: white;
-	opacity: .75;	
-	padding-left: 304px;
-	padding-top: 25px;
-	padding-bottom: 14px;
+#marketing .marketingstrategies .marketingContent{
+	max-width: 705px;
+	margin: 0 auto;
 }
+
 /*marketing ends*/
 
 /*my footer starts*/
@@ -267,5 +271,24 @@ body{
 @media only screen and (max-width: 380px){
 	 .whowearegrid{
 	 	width: 100%;
-	 }
+	 }	 
+	 
 }
+@media only screen and (min-width: 320px) and (max-width: 767px){
+	 .contactForm #quoteform{
+    	position: static;
+	}	
+	#marketing .marketingContent{
+		margin-left: -295px!important;
+	}
+}
+@media only screen and (max-width: 767px){
+	#marketing{
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+	.sections, #download {
+    	margin-bottom: 0px;
+	}
+}
+	
