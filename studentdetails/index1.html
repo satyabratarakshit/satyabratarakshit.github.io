@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Details through JSON object</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<script src="js/angular.js"></script>
+	</head>
+	<body ng-app="myApp">
+		<div class="container well">
+			<div class="row">
+				<div class="col-sm-offset-2 col-sm-9">				
+				<label>serch:<input type="text" ng-model="test"></label>
+					<table class="table table-bordered table-hover" ng-controller="myCtrl1">
+						<h2 class="text-center">Student Details</h2>
+						<tr class="success">
+							<th>Name</th>
+							<th>Email</th>
+							<th>Mobile</th>
+							<th>City</th>
+							<th>State</th>
+							<th>Address</th>
+							<th>Profile Image</th>
+						</tr>
+						<tr class="info" ng-repeat="data in studetail | filter:test">
+							<td>{{data.name}}</td>
+							<td>{{data.email}}</td>
+							<td>{{data.mobile}}</td>
+							<td>{{data.city}}</td>
+							<td>{{data.state}}</td>
+							<td>{{data.address}}</td>
+							<th><img ng-src="{{data.img1}}" alt="Image" height="75px" width="75px"></th>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div><!--Container ends-->
+		<script>
+			var app=angular.module('myApp',[]);
+			app.controller('myCtrl1',function($scope){
+				$scope.studetail=[
+				{name:'Satya',email:'satya@gmail.com',mobile:'999999999',city:'Agartala',state:'Tripura',address:'Satya plaza, satya-Road',img1:'images/1.jpg'},
+				{name:'Jhon',email:'Jhon@gmail.com',mobile:'888888888',city:'Delhi',state:'NCRDelhi',address:'Jhon plaza, Jhon-Road',img1:'images/2.jpg'},
+				{name:'Ravi',email:'ravi@gmail.com',mobile:'7777777777',city:'Agra',state:'UP',address:'ravi plaza, ravi-Road',img1:'images/3.jpg'},
+				{name:'Bill',email:'Bill@gmail.com',mobile:'666666666',city:'Ajmer',state:'Rajesthan',address:'Bill plaza, Bill-Road',img1:'images/4.jpg'},
+				{name:'Sam',email:'Sam@gmail.com',mobile:'555555555',city:'Whitefield',state:'Banglore',address:'Sam plaza, Sam-Road',img1:'images/5.jpg'},
+				{name:'Liku',email:'Liku@gmail.com',mobile:'444444444',city:'Hydrabad',state:'Telangana',address:'Liku plaza, Liku-Road',img1:'images/6.jpg'},
+				{name:'Sunu',email:'Sunu@gmail.com',mobile:'3333333333',city:'Kanchipuram',state:'Chennai',address:'Sunu plaza, Sunu-Road',img1:'images/7.jpg'},
+				{name:'Dev',email:'Dev@gmail.com',mobile:'2222222222',city:'North 24 Parganas',state:'WestBengal',address:'Dev plaza, Dev-Road',img1:'images/8.jpg'}
+				];
+			});
+		</script>
+	</body>
+</html>
