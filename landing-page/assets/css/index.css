@@ -1,0 +1,271 @@
+body{
+	font-family: 'Roboto';
+	padding-top: 50px;
+}
+.sections{
+	margin-bottom: 80px;
+}
+.sectionContent{
+	text-align: center;
+}
+.sectionContent p{
+	font-size: 14px;
+	line-height: 26px;
+	max-width: 914px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*navbar starts*/
+.navbar{
+	background-color: #0189af;
+}
+
+.navbar-default .navbar-nav > li > a{
+	color: white;
+}
+.navbar-default .navbar-nav > li > a:hover{
+	background-color: white;
+	color: #0189af;
+	border-bottom: 3px solid red;
+}
+.navbar-default{
+	border-color: #0189af;
+}
+.navbar-default .navbar-nav > .active > a{
+	border-bottom: 3px solid red;
+	color: #0189af;
+}
+#navigation .navbar-brand{
+	margin-top: -15px;
+}
+#navigation .mainnav{
+	text-align: center;
+	float:none;
+	display: inline-block;
+	margin: 0 auto;
+}
+#navigation .mainnav li{
+	float: none;
+	display: inline-block;
+}
+#navbar{
+	text-align: center;
+}
+/*navbar ends*/
+/*header section Starts*/
+#header .banner{
+	/*background:url(../image/banner-end.png) 0 0 no-repeat;
+	background-size: cover;
+	height: 495px;*/
+	position: relative;
+	/*filter: brightness(.3);*/
+	overflow: hidden;
+}
+#header .banner .carousel{
+	margin-bottom: 0px;
+}
+#header .banner .carousel-caption{
+	text-align: left;
+	max-width: 695px;
+	margin-left: -93px;	
+	top: 0px;
+	margin-top: 100px;
+}
+#header .banner .carousel-caption p:last-child{
+	font-size: 14px;
+}
+.contactForm #quoteform{	
+	position: absolute;
+	/*top: 70px;
+	left: 223px;
+	right: 223px;*/	
+	bottom: 20px;
+	overflow: auto;	
+}
+.contactForm #quoteform{
+	border: 12px solid #6c715c;		
+	background-color: rgba(255,255,255,0.75);
+	padding: 17px 22px;
+	
+}
+.contactForm #banner-heading p:first-child{		
+	color: white;	
+	font-size: 34px;
+	margin-top: 141px;
+}
+.contactForm #banner-heading p:last-child{
+	color: white;
+	font-size: 14px;
+}
+.contactForm #quoteform .form-group{
+	margin-bottom: 22px;
+}
+.contactForm #quoteform .form-group .form-control{
+	border:0px;
+	border-radius: 0px;
+	box-shadow: 6px 0px 18px 1px rgba(0,0,0,.3);
+}
+.contactForm #quoteform .input-group .input-group-addon{
+	background-color: white;
+	border:0px;
+	border-radius: 0px;
+	box-shadow: 0px 0px 18px 1px rgba(0,0,0,.3);
+}
+.contactForm #quoteform h2{
+	text-align: center;
+	font-size: 28px;
+	margin-bottom: 27px;
+	margin-top: 5px;
+}
+/*header section Ends*/
+/*download section starts*/
+#download{	
+	background-color: #0189af;
+	color: white;
+}
+#download .container{
+	padding:34px;
+}
+#download .download-link{
+	
+	color:#ffffff;
+}
+#download .download-link .fa{
+	padding-right: 44px;
+	float: left;
+	margin-left: -16px;
+}
+/*#download .download-link .download-heading{
+	display: block;
+}*/
+#download .download-right p{
+	font-size: 28px;	
+	padding-bottom: 0px;
+	line-height: 31px;
+}
+#download .download-right{
+	padding-left: 0px;
+	float:right;
+}
+#download .download-heading{
+	font-size: 28px;
+	display: block;	
+	margin-top: -9px;
+	/*float: left;*/
+}
+#download .download-text{
+	display: block;	
+}
+/*download section ends*/
+/*who we are starts*/
+.whowearerow{
+	margin-top:20px;
+}
+#whoweare .thumbnail{
+	padding: 40px 15px;	
+	border: 1px solid #d9d9d9;
+	box-shadow: 0px 0px 5px 2px #d9d9d9;
+}
+.whowearegrid h2{
+	text-align: center;
+}
+/*who we are end*/
+/*our services starts*/
+#ourservices .thumbnail{
+	padding: 0px;
+}
+#ourservices .thumbnail h3{	
+	background-color: #0189af;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 15px;
+	font-size: 20px;
+}
+#ourservices .thumbnail p{
+	padding: 18px 15px;
+	margin-bottom: 0px;
+}
+#ourservices .thumbnail .caption{
+	padding: 0px;
+}
+#ourservices .thumbnail h3 span i{
+	padding: 9.5px 19px;
+	background-color: #00bbef;
+	font-size: 36px;
+	margin-right: 12px;
+}
+/*.myservices{
+	text-align: center;	
+	border: 1px solid #d9d9d9;
+	box-shadow: 3px 3px #d9d9d9;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin: 35px 15px 35px 0px;
+}*/
+
+/*our services end*/
+/*marketing starts*/
+#marketing{
+	position: relative;
+	padding-top: 160px;
+	padding-bottom: 160px;
+	overflow: hidden;
+}
+#marketing >img{
+	position: absolute;
+	top: 0px;
+	z-index: -1;
+	width: 100%;
+	height: auto;	
+}
+#marketing .marketingstrategies img{
+	padding-right: 14px;
+}
+#marketing .marketingstrategies h3{
+	font-size: 24px;
+	margin-bottom: 36px;
+}
+#marketing .marketingstrategies p{
+	font-size: 15px;
+	margin-bottom: 36px;
+	max-width: 698px;
+}
+#marketing .marketingstrategies{	
+	background-color: #257186;
+	color: white;
+	opacity: .75;	
+	padding-left: 304px;
+	padding-top: 25px;
+	padding-bottom: 14px;
+}
+/*marketing ends*/
+
+/*my footer starts*/
+.myfooter{
+	background-color: #2f2f2f;
+	color: white;
+	padding: 35px;
+}
+.prefooter{
+	background-color: #333333;
+	color: white;
+}
+.prefooter .container{
+	padding: 50px;
+}
+.prefooter a{
+	color: white;
+}
+.myicon >.fa{
+	display: block!important;
+}
+/*my footer starts*/
+
+
+@media only screen and (max-width: 380px){
+	 .whowearegrid{
+	 	width: 100%;
+	 }
+}
