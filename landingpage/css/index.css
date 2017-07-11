@@ -67,10 +67,10 @@ body{
 #header .banner .carousel-caption{
 	text-align: left;
 	max-width: 695px;
-	/*margin-left: -93px;*/	
+		
 	top: 50%;
 	transform: translateY(-50%);
-	/*margin-top: 100px;*/
+	
 	bottom:auto;
 }
 #header .banner .carousel-caption p:last-child{
