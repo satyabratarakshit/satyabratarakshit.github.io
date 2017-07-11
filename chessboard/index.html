@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Chessbord via JavaScript</title>
 </head>
 <style>
-	#chessBoard{
-    display: inline-block;
-    border: 2px solid black;
-    
+	*{
+		box-sizing: border-box;
+		padding: 0;
+		margin: 0;
 	}
-	#chessBoard span{
-    display: inline-block;
-    width: 190px;
-    height: 190px;
+	#chessBoard{    
+	    border: 2px solid black;
+	    position: absolute;
+	    width: 100%;
+	    height: 100%;
 	}
-	#chessBoard div{
-    line-height: 1px;
+	#chessBoard span{   
+    	width: 12.5%;
+	}
+	#chessBoard div{  
+	    min-height: 12.5%;
+	    display: flex;
 	}
 	#chessBoard div:nth-child(odd) span:nth-child(even),
 	#chessBoard div:nth-child(even) span:nth-child(odd){
-    background-color: black;
+    	background-color: black;
 	}
 	#chessBoard div:nth-child(even) span:nth-child(even),
 	#chessBoard div:nth-child(odd) span:nth-child(odd){
-    background-color: snow;
+    	background-color: snow;
 	}
 </style>
 <body>
@@ -31,13 +37,16 @@
 	<script>
 		var x=8;//col
 			var y=8;//row
+			var innerHtml="";
 			var chessBoard = document.getElementById("chessBoard");
 			for (var i=0; i<y; i++){
-			    var row = chessBoard.appendChild(document.createElement("div"));
+				innerHtml = innerHtml+"<div>";			   
 			    for (var j=0; j<x; j++){
-			        row.appendChild(document.createElement("span"));
+			    	innerHtml = innerHtml+"<span>&nbsp;</span>";			    
 			    }
+			    innerHtml = innerHtml+"</div>";
 			}
+			chessBoard.innerHTML = innerHtml
 	</script>	
 </body>
 </html>
