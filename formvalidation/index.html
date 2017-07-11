@@ -2,126 +2,7 @@
 <html>
 <head>
 	<title>Form Validation</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	<script src="js/jquery.min.js"></script>
-	<script>
-		$(function(){
-		$(".myclass").blur(function(){
-				var data = $(this).val();
-				data = data.trim();
-				var id = $(this).attr("id");
-				var type = $(this).attr("type");
-				//alert(type);
-				//alert(id);
-				
-		if(type=="radio")
-			{
-			if($(".gender:checked").length==0)
-				{
-				$("#egender").show();
-				}else{
-				$("#egender").hide();
-				}
-		    }
-		else if(type=="checkbox")
-		 {
-			if($("#condition:checked").length==0)
-				{
-				$("#econdition").show();
-				}else{
-				$("#econdition").hide();
-				}
-		 }
-		else{
-			if(data=="")
-				{
-				$("#e"+id).show();
-				}else{
-				$("#e"+id).hide();
-				}
-			}
-		});
-		$("#btn1").click(function(){
-			var name = document.getElementById("fname").value;
-			name=name.trim();
-			if(name==""){					
-					document.getElementById("fname").style.borderColor="red";
-					document.getElementById("efname").style.display = 'block';
-				}
-				else{
-					document.getElementById("efname").style.display = 'none';
-					document.getElementById("fname").style.borderColor="";
-				}
-			// for email===================
-			var email = document.getElementById("email").value;
-			email=email.trim();
-			if(email==""){					
-					document.getElementById("email").style.borderColor="red";
-					document.getElementById("eemail").style.display = 'block';
-			}
-			else{
-				
-				document.getElementById("email").style.borderColor="";
-				document.getElementById("eemail").style.display = 'none';
-			}	
-			// for Mobile===================
-			var mobile = document.getElementById("mobile").value;
-			mobile=mobile.trim();
-			if(mobile==""){					
-					document.getElementById("mobile").style.borderColor="red";
-					document.getElementById("emobile").style.display = 'block';
-			}
-			else{
-				
-				document.getElementById("mobile").style.borderColor="";
-				document.getElementById("emobile").style.display = 'none';
-			}
-			// for City===================
-			var city = document.getElementById("city").value;
-			city=city.trim();
-			if(city==""){					
-					document.getElementById("city").style.borderColor="red";
-					document.getElementById("ecity").style.display = 'block';
-			}
-			else{				
-				document.getElementById("city").style.borderColor="";
-				document.getElementById("ecity").style.display = 'none';
-			}	
-			// for Address===================
-			var address = document.getElementById("address").value;
-			address=address.trim();
-			if(address==""){					
-					document.getElementById("address").style.borderColor="red";
-					document.getElementById("eaddress").style.display = 'block';
-			}
-			else{						
-				document.getElementById("address").style.borderColor="";
-				document.getElementById("eaddress").style.display = 'none';
-			}
-			// for Gender===================
-			var male = document.getElementById("m").checked;
-			var female = document.getElementById("f").checked;					
-			if(male==true || female==true){
-				document.getElementById("egender").style.display = 'none';
-			}else
-			{
-				document.getElementById("egender").style.display = 'block';
-			}
-			// for Terms and condition===================
-			var condition =document.getElementById("condition").checked;
-								
-			if(condition==true){
-				document.getElementById("econdition").style.display = 'none';
-			}else
-			{
-				document.getElementById("econdition").style.display = 'block';
-			}
-		});
-		$("#btn2").click(function(){
-			document.getElementById("myForm").reset();
-		});
-	});
-	</script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">	
 	<style>
 		i{
 		 color:red; 
@@ -134,28 +15,26 @@
 		<div class="row">
 			<div class="col-sm-offset-3 col-sm-6">
 				<form action="#" method="POST" class="form-horizontal well">
-					<h1 class="text-center">
-						Form Validation
-					</h1>
+					<h1 class="text-center">Form Validation</h1>
 					<div class="form-group">
 					    <label class="col-sm-2 control-label">Name</label>
 					    <div class="col-sm-10">				     
 					      <input type="text" class="form-control myclass" id="fname">
-							<i id="efname">This field is required</i>
+							<i id="efname">Please Enter Your Name</i>
 					    </div>
 				  </div>
 				  <div class="form-group">
 					    <label class="col-sm-2 control-label">Email Id</label>
 					    <div class="col-sm-10">				     
 					      <input type="text" class="form-control myclass" id="email">
-							<i id="eemail">This field is required</i>
+							<i id="eemail">Please Enter Your Email Id</i>
 					    </div>
 				  </div>
 				  <div class="form-group">
 					    <label class="col-sm-2 control-label">Mobile</label>
 					    <div class="col-sm-10">				     
 					      <input type="text" class="form-control myclass" id="mobile">
-							<i id="emobile">This field is required</i>
+							<i id="emobile">Please Enter Your Mobile</i>
 					    </div>
 				  </div>
 				  <div class="form-group">
@@ -167,14 +46,14 @@
 							<option value="2">Delhi</option>
 							<option value="3">Pune</option>
 						</select>
-						<i id="ecity">This field is required</i>
+						<i id="ecity">Please Select A City</i>
 					    </div>
 				  </div>
 				  <div class="form-group">
 					    <label class="col-sm-2 control-label">Address</label>
 					    <div class="col-sm-10">				     
 						    <textarea class="form-control myclass" id="address"></textarea>
-							<i id="eaddress">This field is required</i>
+							<i id="eaddress">Please Enter Your Address</i>
 					    </div>
 				  </div>
 				  <div class="form-group">
@@ -183,7 +62,7 @@
 					      <label><input type="radio" name="gender" id="m" class="gender myclass" value="m">Male</label>
 					      <label><input type="radio" name="gender" id="f" class="gender myclass" value="f">Female</label>
 					      <br>
-					      <i id="egender">This gender is required</i>
+					      <i id="egender">Please Select Gender</i>
 					    </div>
 				  </div>
 				   <div class="form-group">					    
@@ -196,12 +75,14 @@
 				  <div class="form-group">					    
 					    <div class="text-center">				     
 					      <button id="btn1" class="btn btn-primary btn-lg" type="button">Save</button>
-					      <button id="btn2" class="btn btn-warning btn-lg" >Reset</button>						
+					      <button id="btn2" class="btn btn-warning btn-lg" type="button">Reset</button>						
 					    </div>
 				  </div>
 				</form>
 			</div>
 		</div>
 	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/index.js"></script>
 </body>
 </html>
