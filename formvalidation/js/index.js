@@ -44,8 +44,8 @@ $(".myclass").blur(function(){
 	var email = document.getElementById("email").value;
 	email=email.trim();
 	if(email==""){					
-			document.getElementById("email").style.borderColor="red";
-			document.getElementById("eemail").style.display = 'block';
+		document.getElementById("email").style.borderColor="red";
+		document.getElementById("eemail").style.display = 'block';
 	}
 	else{			
 		document.getElementById("email").style.borderColor="";
@@ -101,6 +101,6 @@ $(".myclass").blur(function(){
 	}
 	});
 	$("#btn2").click(function(){
-		document.getElementById("myForm").reset();		
+		$("#myForm")[0].reset();		
 	});
 });
