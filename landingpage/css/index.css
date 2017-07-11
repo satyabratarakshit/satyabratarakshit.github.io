@@ -7,6 +7,7 @@ body{
 }
 .sectionContent{
 	text-align: center;
+	padding-bottom: 42px;
 }
 .sectionContent p{
 	font-size: 14px;
@@ -181,6 +182,15 @@ body{
 	display: table;
 	width: 100%;
 }
+#ourservices .thumbnail h3 .arrowSpan {
+    width: 59px;
+    height: 55px;
+    background-color: #00bbef;
+    text-align: center;
+}
+#ourservices .thumbnail h3 .headSpan{
+	padding-left: 11px;
+}
 #ourservices .thumbnail p{
 	padding: 18px 15px;
 	margin-bottom: 0px;
@@ -276,6 +286,9 @@ body{
 	}	
 	#marketing .marketingContent{
 		margin-left: -295px!important;
+	}
+	#myCarousel .carousel-caption{
+		padding-left: 100px;
 	}
 }
 @media only screen and (max-width: 767px){
