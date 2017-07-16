@@ -1,0 +1,314 @@
+body{
+	margin: 0px;
+}
+/*header start*/
+.header{
+	position: relative;
+}
+.content{
+	position: absolute;	
+	top: 15%;
+    z-index: 10;
+    left: 0;
+    width:100%;
+}
+.header:hover #navigation{
+	display: block;
+}
+/*header end*/
+/*superslides starts*/
+.content h2{	
+	font-size: 33px;
+	font-weight: bold;
+}
+.content p{	
+	font-size: 26px;
+	background-color: #ef7674;
+	color: white;	
+	padding-left: 35px;
+	padding-right: 35px;
+}
+/*#slides .content .slidelogo img{	
+	position: fixed;
+	top: 100%!important;
+	height: auto!important;
+	max-width: 100%!important;
+	left: -20px!important;
+}*/
+
+/*superslides end*/
+/*Navigation starts */
+
+#navigation{
+	background-color: rgba(255, 255, 255, .8);
+	position: absolute;
+	bottom: 0;
+	z-index: 100;
+	width: 100%;
+	display: none;
+	border-radius: 0px;
+}
+.navbar-nav{
+	width: 100%;
+	text-align: center;
+}
+.navbar-default .navbar-nav > li{
+	display: inline-block;
+	float: none;
+}
+.navbar-default .navbar-nav > li > a{
+	padding: 34px 15px;
+	font-size: 19px;
+}
+#navigation .navbar{
+	margin-bottom: 0px;
+}
+.fixedNav #navigation{
+	position: fixed;
+	bottom:auto;
+	top: 0;
+	display: block;
+}
+.navbar{
+	margin-bottom: 0px;
+}
+/*Navigation end*/
+/*ABOUT US START*/ 
+#aboutus{
+	background-color: #3e353f;
+}
+#aboutus .row{
+	display: flex;
+}
+#aboutus .aboutusimage{	
+	background-image: url(../image/aboutusimage.png);
+	background-size: cover;	
+	background-repeat: no-repeat;
+	padding: 0px;	
+	position: relative;
+	height: auto;
+}
+#aboutus .aboutusimage::after{
+	background-image: url(../image/iconRing.gif);
+	position: absolute;
+	top: 119px;
+	content: "";
+	right:0;
+	margin-right: -55px;
+	width: 110px;
+	height: 110px;
+
+}
+#aboutus .aboutustext{
+	color: white;
+	max-width: 560px;
+	padding-left: 80px;
+	padding-top: 98px;
+	padding-bottom: 207px;
+}
+#aboutus .aboutustext h1{
+	color: #ef7674;
+	font-size: 53px;
+}
+#aboutus .aboutustext p{
+	font-style: 15px;
+	line-height: 27px;
+}
+#aboutus .aboutustext p:first-of-type {
+	font-family: Orator Std;
+	font-size: 24px;
+}
+#aboutus .aboutustext p:last-of-type {
+	margin-top: 30px;
+}
+/*ABOUT US ENDS*/
+/*funfacts starts*/
+#funfacts{
+	background-image: url(../image/funfactsbackground.png);
+	background-size: cover;	
+	padding-bottom: 101px;
+	padding-top: 80px;	
+}
+#funfacts .funfactscontent{
+	text-align: center;
+	padding-bottom: 87px;
+	color: white;
+}
+#funfacts .funfactscontent h1{
+	margin-bottom: 18px;
+}
+#funfacts .factsdata h1{
+	color: #ef7674;
+	font-size: 60px;
+}
+#funfacts .factsdata p{
+	color: white;
+}
+/*funfacts ends*/
+/*footer starts*/
+#footer{
+	background-color: #201b20;
+	padding-top: 33px;
+	padding-bottom: 29px;
+}
+#footer .gototop a {
+	color: #423d43;
+	background-color: #161216;
+	font-size: 30px;
+}
+#footer .sonydetails p{
+	color: #685e68;	
+	margin-left: 22px;
+	margin-top: -14px;
+	padding-right: 35px;
+}
+#footer .companylinks{
+	display: flex;
+}
+.socialLinks{
+	text-align: center;
+}
+.socialLinks li{
+  	padding-left:5px;
+  	padding-right: 5px;
+}
+.socialLinks li a{
+	display: block;
+	width:37px;
+	height: 37px;
+	overflow:hidden;
+	background-image: url(../image/footer-icons.png);	
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.socialLinks li a.icon1{
+	
+}
+.socialLinks li a.icon1:hover{
+	background-position: 0 -38px;
+}
+.socialLinks li a.icon2{
+	background-position: -47px 0;
+}
+.socialLinks li a.icon2:hover{
+	background-position: -47px -38px;
+}
+.socialLinks li a.icon3{
+	background-position: -94px 0;
+}
+.socialLinks li a.icon3:hover{
+	background-position: -94px -38px;
+}
+.socialLinks li a.icon4{
+	background-position: -141px 0;
+}
+.socialLinks li a.icon4:hover{
+	background-position: -141px -38px;
+}
+.socialLinks li a.icon5{
+	background-position: -188px 0;
+}
+.socialLinks li a.icon5:hover{
+	background-position: -188px -38px;
+}
+.socialLinks li a.icon6{
+	background-position: -235px 0;
+}
+.socialLinks li a.icon6:hover{
+	background-position: -235px -38px;
+}
+.socialLinks li a.icon7{
+	background-position: -282px 0;
+}
+.socialLinks li a.icon7:hover{
+	background-position: -282px -38px;
+}
+/*footer ends*/
+/*media Query starts*/
+@media screen and (max-width: 1024px){
+	#navigation{
+		position: fixed;
+		top:0;
+		bottom:auto;
+		display: block;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 1024px){
+	.navbar-default .navbar-nav > li > a{
+		padding:15px;
+		font-size: 14px;
+    	font-weight: bold;
+	}
+	#funfacts{
+		background-image: url(../image/funfactsbackground.png);
+	    background-size: cover;
+	    padding-bottom: 40px;
+	    padding-top: 40px;
+	    background-position: 50%;
+	}
+	#funfacts .funfactscontent{
+		padding-bottom: 40px;
+	}
+	#aboutus .aboutusimage{
+		    background-position: 50%;
+	}
+	#aboutus .aboutustext h1{
+		word-break: break-all;
+	}
+}
+@media screen and (min-width: 320px) and (max-width: 767px){
+	
+	h1, .h1, #funfacts .factsdata h1{
+		font-size: 25px;
+	}
+	.navbar-default .navbar-nav > li{
+		left:0;
+	}
+	.navbar-default .navbar-nav > li > a{
+		padding:15px;
+	}
+	#aboutus .row{		
+		flex-direction: column;
+	}
+	#aboutus .aboutusimage{
+		height: 450px;
+	}
+	#aboutus .aboutusimage::after{
+		top: auto;
+		bottom: 0px;
+		left: 50%;
+		margin-bottom: -55px;
+		margin-left: -55px;		
+	}
+	#aboutus .aboutustext{
+		padding-left: 15px;
+		padding-top:60px;
+		padding-bottom: 60px;
+	}
+	#aboutus .aboutustext h1{
+		font-size: 30px;
+	}
+	#funfacts{
+		padding-bottom: 0px;
+		background-position: 50% 50%;		
+		padding-top:40px;
+		padding-bottom: 40px;
+	}
+	#footer .socialLinks{
+		margin-left: 0px;
+		/*display: inline-grid;*/
+		padding-bottom: 10px;
+		text-align: center;
+	}	
+	#footer .companylinks{
+	display: block;
+	text-align: center;
+	}
+	#footer .companylinks a img{
+		padding-bottom: 10px;
+	}
+	#funfacts .funfactscontent{
+		padding-bottom: 40px;
+	}
+}
+/*media Query ends*/
