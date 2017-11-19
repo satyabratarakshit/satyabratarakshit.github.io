@@ -1,0 +1,108 @@
+.searchblock{
+	padding-bottom: 20px;
+}
+.panel-default, .panel-success, .panel-danger{ 		/*==================new=============================*/
+	margin-top: 10px;
+}
+.panel-heading .fa-gear{		/*==================new=============================*/
+	padding-top: 15px;
+}
+
+.table .arrow:hover, .table .arrow:active, .table .arrow:visited, .table .arrow:focus{
+	text-decoration: none;
+	transition: 0.4s all ease-out;
+}
+.table .rotateicon {    
+    transform: rotate(180deg);
+}
+.fa-chevron-down{
+	color: #000;	
+}
+.fa-chevron-down:hover{
+	color: green;
+	/*font-size: 18px;*/
+}
+.well{
+	padding: 12px;
+}
+hr{
+	margin: 0px;
+}
+.viewdetail{
+	background-color: #EDF3F4;
+}
+.viewdetail .well{
+	margin-bottom: 0px;
+	border:2px solid #dcebf7;
+	background-color: #fff;		/*==================new=============================*/
+}
+.viewdetail .well .col-sm-6{
+	border: 1px solid #DCEBF7;	
+}
+.viewdetail .well .details .col-sm-3{
+	text-align: right;
+	padding: 6px 10px 6px 4px;	
+	color: #336199;
+	background-color: #EDF3F4;
+    border-top: 1px solid #F7FBFF;
+}
+.viewdetail .well .details .col-sm-9{
+	padding: 6px 4px 6px 12px;
+	border-top: 1px dotted #DCEBF7;	
+}
+.viewdetail .well .details div:last-of-type .col-sm-2, .viewdetail .well .details div:last-of-type .col-sm-10{
+	border-bottom: 0px;
+}
+.viewdetail .well .editblock h3{
+	margin-top: 0px;
+	color: #006098;
+	
+}
+.viewdetail .editblock .username{
+	font-weight: bold;	
+}
+.viewdetail .posttime{
+	font-weight: 100;
+	font-size: 12px;
+}
+.viewdetail form input{
+	outline: none;
+	border: 0;
+    /*padding-right: 95px;*/
+   	padding-top: 7px;
+    padding-left: 7px;
+}
+.viewdetail .messageblock{
+	padding: 5px;
+	padding-right: 13px;	
+}
+.viewdetail .messagebox{
+	border-top: 1px solid #eee;
+	padding: 10px;
+}
+.messagebox:first-of-type{
+	border: 0px;
+}
+.viewdetail form{
+	border: 1px solid #eee;
+   /* padding: 9px;*/
+   background-color: #fff;
+}
+.viewdetail form a{
+	text-decoration: none;
+    color: #fff;
+    padding: 6px 10px;
+    background-color: #9c9c9c;
+    border: 1px solid #9c9c9c;
+}
+.viewdetail form a:hover{
+	background-color: #fff;
+	border: 1px solid #9c9c9c;
+	color: #9c9c9c;
+}
+.fa{
+	padding: 2px;
+}
+.fa-trash-o{
+	color: red;
+}
