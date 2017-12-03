@@ -1,0 +1,11 @@
+.logo{
+    width: 130px;
+    margin: auto;
+}
+.navbar .dropdown> a{
+    color: #dde0e4;
+    text-decoration: none;
+}
+.dropdown{    
+    margin-top: 9px;
+}
