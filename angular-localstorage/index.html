@@ -1,0 +1,134 @@
+<html>
+	<head>
+		<title>Routing in Angular JS</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/angular.js"></script>
+		<script src="js/route.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.11/ngStorage.js"></script> -->		
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script> -->
+		<style>
+			body{
+				margin-top: 50px;
+				
+			}
+			.home{
+				background-color: #EF7724; 
+			}
+			footer{
+				background-color: #d2dfe4;
+				padding: 20px; 
+			}
+			footer a{
+				color: #000;			 
+			}
+			footer a:hover{
+				text-decoration: none;
+				color: #285882;
+			}
+			.registration{
+				margin-top: 15px;
+				margin-bottom: 15px;
+				border: 1px solid #000;
+				border-radius: 5px;
+			}
+			.erroremsg{			
+				color: red;
+			}
+		</style>
+	</head>
+	
+	<body ng-app="myModule">		
+	    <nav class="navbar navbar-default navbar-fixed-top">
+	        <div class="container">
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		          <a class="navbar-brand" href="#">My Web Site</a>
+		        </div>
+		        <div id="navbar" class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav">
+		            <li><a href="#home">Home</a></li>
+		            <li><a href="#about">About Us</a></li>
+		            <li><a href="#Contact">Contact Us</a></li>            
+		          </ul>          
+		        </div><!--/.nav-collapse -->
+	        </div>
+	    </nav><!--fixed navbar end-->
+	    
+
+		<div ng-view></div>
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						<h2>Quick Links</h2>
+						<ul class="list-unstyled">
+							<li><a href="#home" class="link">Home</a></li>
+	            			<li><a href="#about" class="link">About US</a></li>
+	            			<li><a href="#contact" class="link">Contact Us</a></li>
+						</ul>
+					</div>
+					<div class="col-sm-4">
+						<h2>Find Us</h2>
+						<ul class="list-unstyled">
+							<li><a target="_blank" href="https://www.facebook.com/varadhismartek/">Facebook</a></li>
+	            			<li><a target="_blank" href="https://www.twitter.com/">Linkedin</a></li>	            			
+						</ul>
+					</div>
+					<div class="col-sm-4">
+						<h2>Subscribe</h2>
+						<p>
+							<input type="email" name="subscribe" class="form-control" placeholder="Enter Your Email ID">
+						</p>
+						
+						<button class="btn btn-primary">Subscribe</button>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script>
+			var app=angular.module("myModule",["ngRoute"]);
+			app.config(function($routeProvider){
+				$routeProvider					
+					.when("/home",{
+						templateUrl : 'home.html'
+					})
+					.when("/about",{
+						templateUrl : 'about.html'
+					})
+					.when("/Contact",{
+						templateUrl : 'contact.html'
+					})
+					.otherwise({
+				    redirectTo: "/home"
+				});				
+			});
+			app.controller("myCtrl", function($scope){				
+				$scope.saved = localStorage.getItem('myObj');
+				$scope.myObj = (localStorage.getItem('myObj')!==null) ? JSON.parse($scope.saved) : [ {name: 'satyabrata', email: "s.rakshit88@gmail.com"}];
+				// localStorage.setItem('myObj', JSON.stringify($scope.myObj));						
+				$scope.add = function(){										
+					$scope.myObj.push({
+						name : $scope.name,
+						email : $scope.email
+					});
+					localStorage.setItem("myObj", JSON.stringify($scope.myObj));
+					// $scope.myObj=JSON.parse(localStorage.getItem("myObj"));
+					$scope.name = "";
+					$scope.email = "";
+				};				
+			});
+			app.controller("regusers", function($scope){
+				$scope.myObj=JSON.parse(localStorage.getItem("myObj"));				
+			});	
+			
+		</script>
+	</body>
+</html>

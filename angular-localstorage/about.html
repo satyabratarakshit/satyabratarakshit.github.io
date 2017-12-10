@@ -1,0 +1,81 @@
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8">
+				<h2 class="text-center">About Us</h2>
+				<p class="text-justify">
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+				</p>
+			</div>
+			<div class="col-sm-4" ng-controller="regusers">
+				<h1>Registered users</h1>
+				<form class="form-horizontal">
+					<div class="form-group">					    
+					    <div class="col-sm-10">					      	
+					      	<input type="text" name="" id="" value="" ng-model="searchparam" class="form-control" placeholder="Search Name"/>     	
+					    </div>
+					    <button type="submit" class="btn btn-primary col-sm-2">search</button>
+					</div>				
+				</form>
+				<table class="table table-bordered table-responsive table-hover">
+					<tr class="success">
+						<th>Name</th>
+						<th>Email</th>
+					</tr>
+					<tr ng-repeat= "mb in myObj | filter: searchparam  track by $index" class="info">
+						<td >
+						  {{mb.name}}
+						</td>
+						<td>{{mb.email}}</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<div class="thumbnail">
+			      	<img src="images/1.jpg" alt="...">
+			      	<div class="caption">
+			        	<h3>Heading</h3>
+			        	<p>
+			        		Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, 
+			        	</p>			        	
+			      </div>
+			    </div>				
+			</div>
+			<div class="col-sm-3">
+				<div class="thumbnail">
+			      	<img src="images/2.jpg" alt="...">
+			      	<div class="caption">
+			        	<h3>Heading</h3>
+			        	<p>
+			        		Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, 
+			        	</p>			        	
+			      </div>
+			    </div>
+			</div>
+			<div class="col-sm-3">
+				<div class="thumbnail">
+			      	<img src="images/3.jpg" alt="...">
+			      	<div class="caption">
+			        	<h3>Heading</h3>
+			        	<p>
+			        		Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, 
+			        	</p>			        	
+			      </div>
+			    </div>
+			</div>
+			<div class="col-sm-3">
+				<div class="thumbnail">
+			      	<img src="images/4.jpg" alt="...">
+			      	<div class="caption">
+			        	<h3>Heading</h3>
+			        	<p>
+			        		Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, 
+			        	</p>			        	
+			      </div>
+			    </div>
+			</div>
+		</div>
+	</div>
+</section>
