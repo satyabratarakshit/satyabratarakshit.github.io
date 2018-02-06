@@ -1,11 +1,251 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
+	<title>Praizbuk</title>
 	<meta charset="UTF-8">
-	<title>Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	 crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/route.js"></script>
 </head>
-<body>
-	<h1>Welcome</h1>
-	<a href="https://satyabratarakshit.github.io/landingpage/"><img src="images/landing-page-portfolio.jpg" alt=""></a>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+				 aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">
+					<img alt="Brand" src="images/praizbuk-logo.png">
+				</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#/!" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							Dropdown
+						</a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#/!">Action</a>
+							</li>
+							<li>
+								<a href="#!a1">Another action</a>
+							</li>
+							<li>
+								<a href="#">Something else here</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="#">Separated link</a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+								<a href="#">One more separated link</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<form class="navbar-form navbar-left">
+					<div class="form-group has-feedback">
+						<input type="text" class="form-control" placeholder="Search">
+						<button type="submit" class="btn btn-default form-control-feedback">
+							<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						</button>
+
+					</div>
+
+				</form>
+				<ul class="nav navbar-nav navbar-left usernav">
+					<li>
+						<a data-toggle="modal" data-target="#loginmodal">Login</a>
+					</li>
+					<li>
+						<a>Join</a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right usernav">
+					<li>
+						<a>Logout</a>
+					</li>
+					<li>
+						<a>Join</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		</div>
+		<!-- /.container-fluid -->
+	</nav>
+	<section id="displaybody">
+		<div class="container-fluid">
+			<div class="row clearfix">
+				<div class="col-sm-2 clearfix">
+					<div id="leftnav">
+						<ul class="list-inline">
+							<li class="active">
+								<i class="glyphicon glyphicon-star"></i>
+								<a>
+									POPULAR
+								</a>
+							</li>
+							<li>
+								<span class="glyphicon glyphicon-time"></span>
+								<a>TREANDING </a>
+							</li>
+						</ul>
+						<div class="sideBar" custom-scrollbar min="25" max="75" step="5">
+							<div ng-repeat="td in trendData" class="sideBar_rep">
+								<img ng-src="{{td.thumbSrc}}" alt="">
+								<h3 class="heading">{{td.heading}}</h3>
+								<span>2 Years Ago</span>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="col-sm-10" ng-view>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div id="scroltotop" class="pull-right">
+			<a>
+				<img src="images/arrow26.png" alt="arrow">
+			</a>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-2 blog-title">
+					<a href="#">Praizuk</a>
+				</div>
+				<div class="col-sm-8 blog-credits">
+					<ul class="list-inline">
+						<li>
+							<a href="#">About</a>
+						</li>
+						<li>
+							<a href="#">FAQs</a>
+						</li>
+						<li>
+							<a href="#">Tearms Of Use</a>
+						</li>
+						<li>
+							<a href="#">Privacy Policy</a>
+						</li>
+						<li>
+							<a href="#">Feedback</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-sm-2 socialicons">
+					<ul class="list-inline">
+						<li>
+							<a href="#">
+								<i class="fa fa-facebook"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-twitter"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-google-plus"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!--modal-->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title" id="myModalLabel">{{heading}}</h4>
+				</div>
+				<div class="modal-body">
+					{{body}}
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- login modal  -->
+	<div class="modal fade" id="loginmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog modal-sm" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<div class="modal-title text-center" id="myModalLabel">
+						<img alt="Brand" src="images/praizbuk-logo-login.png">
+						<h4>Modal login</h4>
+						<p>
+							<a>Create Account</a>
+						</p>
+					</div>
+
+				</div>
+				<div class="modal-body">
+					<form action="">
+						<div class="form-group">
+							<label for="email">Email ID</label>
+							<input type="email" name="email" id="email" class="form-control">
+							<span id="eemail">This Fiels is required*</span>
+						</div>
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input type="password" name="password" id="password" class="form-control">
+							<span id="epassword">This Fiels is required*</span>
+						</div>
+						<div class="form-group">
+							<button type="button" class="btn btn-primary" id="login">Submit</button>.
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<a>Forget Password</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </body>
+
 </html>
