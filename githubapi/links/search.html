@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row" ng-controller="searchUser">
+        <div class="col-sm-offset-3 col-sm-6" ng-if="userdata">                    
+            <div class="thumbnail">
+                <div class="text-center">
+                    <img ng-src={{userimage}} alt="" class="img-circle img-responsive">
+                    <h1 class="text-center">{{username}}</h1>
+                    <h3>Login id:
+                        <a href="{{userurl}}" target="_blank">{{userlogin}}</a>
+                    </h3>
+                    <p>{{userlogin}}</p>
+                    <p class="Lead">List of repositories :
+                </div>                
+                <ul class="list-unstyled list-group">
+                    <li ng-repeat="a in reponame" class="list-group-item ">
+                        <strong class="clearfix">
+                            <button class="btn btn-primary pull-right btn-sm" ng-click="showLanguage(a.languages_url, $index)">show language</button>
+                            <a href="{{a.clone_url}}" target="-blank">{{a.name}}</a>
+                        </strong>
+                        <br>                       
+
+                        <div class="languageData" ng-if="a.languageData">
+                            <ul class="list-unstyled ">
+                                <li ng-repeat="(key, value) in a.languageData" class="progress" ng-if="repodata">
+                                    <div show-parcent value="{{value}}" total="{{a.total}}" key="{{key}}"></div>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </li>
+                </ul>
+                </p>
+            </div>
+
+        </div>
+        <div class="col-sm-offset-3 col-sm-6" ng-if="!userdata">
+            <h1 class="text-center">No user found</h1>
+        </div>
+    </div>
+</div>
